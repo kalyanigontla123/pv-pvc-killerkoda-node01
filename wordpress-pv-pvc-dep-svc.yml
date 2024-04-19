@@ -1,21 +1,5 @@
-# Create PV for Wordpress
 
-apiVersion: v1
-kind: PersistentVolume
-metadata:
-  name: wordpresspv
-spec:
-  storageClassName: "manual"
-  capacity:
-    storage: 10Gi
-  accessModes:
-    - ReadWriteMany
-  nfs:
-    server: node01
-    # Exported path of your NFS server
-    path: "/test2"
 
----
 
 # Create PVC for Wordpress
 
@@ -24,7 +8,7 @@ kind: PersistentVolumeClaim
 metadata:
   name: wordpresspvc
 spec:
-  storageClassName: "manual"
+  storageClassName: "kubernetes.io/aws-ebs"
   accessModes:
     - ReadWriteMany
   resources:
