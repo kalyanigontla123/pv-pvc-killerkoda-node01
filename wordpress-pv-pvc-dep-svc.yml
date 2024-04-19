@@ -8,7 +8,7 @@ kind: PersistentVolumeClaim
 metadata:
   name: wordpresspvc
 spec:
-  storageClassName: "default"
+  storageClassName: "gp3"
   accessModes:
     - ReadWriteMany
   resources:
