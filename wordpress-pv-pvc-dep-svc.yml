@@ -8,7 +8,7 @@ kind: PersistentVolumeClaim
 metadata:
   name: wordpresspvc
 spec:
-  storageClassName: "kubernetes.io/aws-ebs"
+  storageClassName: "default"
   accessModes:
     - ReadWriteMany
   resources:
