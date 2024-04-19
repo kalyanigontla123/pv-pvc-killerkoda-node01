@@ -1,24 +1,5 @@
 
 
-# Create MYSQL PV
-
-apiVersion: v1
-kind: PersistentVolume
-metadata:
-  name: mysqlpv
-spec:
-  storageClassName: "manual"
-  capacity:
-    storage: 10Gi
-  accessModes:
-    - ReadWriteMany
-  nfs:
-    server: node01
-    # Exported path of your NFS server
-    path: "/test"
-
----
-
 # Create MYSQL PVC
 
 apiVersion: v1
@@ -26,7 +7,7 @@ kind: PersistentVolumeClaim
 metadata:
   name: mysqlpvc
 spec:
-  storageClassName: "manual"
+  storageClassName: "kubernetes.io/aws-ebs"
   accessModes:
     - ReadWriteMany
   resources:
