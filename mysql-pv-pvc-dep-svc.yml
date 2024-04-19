@@ -8,11 +8,12 @@ metadata:
   name: mysqlpvc
 spec:
   storageClassName: "gp3"
+  volumeMode: Filesystem
   accessModes:
     - ReadWriteMany
   resources:
     requests:
-      storage: 6Gi
+      storage: 1Gi
 
 ---
 
