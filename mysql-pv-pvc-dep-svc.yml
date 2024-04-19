@@ -7,7 +7,7 @@ kind: PersistentVolumeClaim
 metadata:
   name: mysqlpvc
 spec:
-  storageClassName: "default"
+  storageClassName: "gp3"
   accessModes:
     - ReadWriteMany
   resources:
