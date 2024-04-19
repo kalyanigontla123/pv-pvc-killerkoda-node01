@@ -7,7 +7,7 @@ kind: PersistentVolumeClaim
 metadata:
   name: mysqlpvc
 spec:
-  storageClassName: "kubernetes.io/aws-ebs"
+  storageClassName: "default"
   accessModes:
     - ReadWriteMany
   resources:
