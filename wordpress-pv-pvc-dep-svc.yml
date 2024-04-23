@@ -52,7 +52,7 @@ spec:
         - name: WORDPRESS_DB_PASSWORD
           value: alexa
         - name: WORDPRESS_DB_NAME
-          value: verma
+          value: gontla
         volumeMounts:
         - name: wordpressvol 
           mountPath: /var/www/html
