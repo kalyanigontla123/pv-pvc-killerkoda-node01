@@ -47,7 +47,7 @@ spec:
         - name: MYSQL_ROOT_PASSWORD
           value: alexa
         - name: MYSQL_DATABASE
-          value: verma
+          value: gontla
         volumeMounts:
         - name: mysqlvol 
           mountPath: /var/lib/mysql
